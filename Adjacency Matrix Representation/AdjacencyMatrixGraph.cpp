@@ -3,7 +3,7 @@ using namespace std;
 
 class AdjMatrixGraph {
    private:
-  int** adj;     //2-D array to store adjacency matrix
+  int** adj;     //2-D array to store adjacency matrix for the graph
   int v;         //number of vertices
 
    public:
@@ -35,13 +35,13 @@ class AdjMatrixGraph {
 };
 
 int main() {
-  AdjMatrixGraph graph(5);
+  AdjMatrixGraph graph(5);            //local object for creating graph
 
-  graph.addEdge(0, 1);
+  graph.addEdge(0, 1);                //adding required edges in the graph
   graph.addEdge(0, 2);
   graph.addEdge(2, 4);
   graph.addEdge(1, 3);
   graph.addEdge(2, 3);
 
-  graph.printMatrix();
+  graph.printMatrix();                //print the adjacency matrix for the graph
 }
